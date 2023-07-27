@@ -1,0 +1,52 @@
+{
+    "name": "apimatic/twiliomessagingsms",
+    "description": "Ahoy!  This Postman collection serves as a toolbelt for you to work with Twilio's [Programmable Messaging API](https://www.twilio.com/messaging).  It provides functionality to interact with a subset of the Twilio API. For a more complete view of the API, make sure to visit our [Twilio Docs](https://www.twilio.com/docs/sms).  Contact Support:  Name: Twilio Support  Email: support@twilio.com",
+    "type": "library",
+    "keywords": [
+        "Twilio Messaging / SMS",
+        "API",
+        "SDK"
+    ],
+    "homepage": "https://www.apimatic.io",
+    "license": [
+        "MIT"
+    ],
+    "authors": [
+        {
+            "name": "APIMatic Code Generator",
+            "email": "support@apimatic.io",
+            "homepage": "https://www.apimatic.io",
+            "role": "API Tool"
+        }
+    ],
+    "require": {
+        "php": "^7.2 || ^8.0",
+        "ext-json": "*",
+        "vlucas/phpdotenv": "^5.2",
+        "apimatic/unirest-php": "^4.0.0",
+        "apimatic/core-interfaces": "~0.1.0",
+        "apimatic/core": "~0.3.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.5",
+        "phan/phan": "5.4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "TwilioMessagingSMSLib\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TwilioMessagingSMSLib\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "lint-src": "phpcs --standard=phpcs-ruleset.xml src/",
+        "lint-src-fix": "phpcbf --standard=phpcs-ruleset.xml src/",
+        "analyze": "phan --allow-polyfill-parser",
+        "lint": [
+            "@lint-src"
+        ]
+    }
+}
